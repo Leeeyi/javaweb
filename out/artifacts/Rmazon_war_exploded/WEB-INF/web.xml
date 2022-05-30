@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+
+    <context-param>
+        <param-name>webAppRootKey</param-name>
+        <param-value>sunMoonRise.root</param-value>
+    </context-param>
+    <session-config>
+        <session-timeout>0</session-timeout>
+    </session-config>
+
+    <!-- 编码过滤器 -->
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>Filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>client.Register</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>client.Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Browse</servlet-name>
+        <servlet-class>client.Browse</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Browse</servlet-name>
+        <url-pattern>/browse</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddCart</servlet-name>
+        <servlet-class>client.AddCart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddCart</servlet-name>
+        <url-pattern>/addcart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>client.Logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DelCart</servlet-name>
+        <servlet-class>client.DelCart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DelCart</servlet-name>
+        <url-pattern>/delcart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddGoods</servlet-name>
+        <servlet-class>admin.AddGoods</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddGoods</servlet-name>
+        <url-pattern>/addgoods</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DelGoods</servlet-name>
+        <servlet-class>admin.DelGoods</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DelGoods</servlet-name>
+        <url-pattern>/delgoods</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChangeGoods</servlet-name>
+        <servlet-class>admin.ChangeGoods</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangeGoods</servlet-name>
+        <url-pattern>/changegoods</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Admin</servlet-name>
+        <servlet-class>admin.Admin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Change</servlet-name>
+        <servlet-class>admin.Change</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Change</servlet-name>
+        <url-pattern>/change</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Info</servlet-name>
+        <servlet-class>client.Info</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Info</servlet-name>
+        <url-pattern>/info</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Orders</servlet-name>
+        <servlet-class>admin.Orders</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Orders</servlet-name>
+        <url-pattern>/order</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DelOrder</servlet-name>
+        <servlet-class>admin.DelOrder</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DelOrder</servlet-name>
+        <url-pattern>/delOrder</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Board</servlet-name>
+        <servlet-class>admin.Board</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Board</servlet-name>
+        <url-pattern>/board</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Path</servlet-name>
+        <servlet-class>Dao.Path</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Path</servlet-name>
+        <url-pattern>/path</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Index</servlet-name>
+        <servlet-class>client.Index</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Index</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GoodsList</servlet-name>
+        <servlet-class>admin.GoodsList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GoodsList</servlet-name>
+        <url-pattern>/goodslist</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DelSalesMan</servlet-name>
+        <servlet-class>admin.DelSalesMan</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DelSalesMan</servlet-name>
+        <url-pattern>/delsalesman</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChangePassword</servlet-name>
+        <servlet-class>admin.ChangePassword</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangePassword</servlet-name>
+        <url-pattern>/changepassword</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SalesManList</servlet-name>
+        <servlet-class>salesman.SalesManList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SalesManList</servlet-name>
+        <url-pattern>/salesmanlist</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddSalesMan</servlet-name>
+        <servlet-class>admin.AddSalesMan</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddSalesMan</servlet-name>
+        <url-pattern>/addsalesman</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChangeSalesMan</servlet-name>
+        <servlet-class>admin.ChangeSalesMan</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangeSalesMan</servlet-name>
+        <url-pattern>/changesalesman</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SalesManBrowse</servlet-name>
+        <servlet-class>salesman.SalesManBrowse</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SalesManBrowse</servlet-name>
+        <url-pattern>/salesmanbrowse</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BrowseOrder</servlet-name>
+        <servlet-class>salesman.BrowseOrder</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BrowseOrder</servlet-name>
+        <url-pattern>/browseorder</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SalesManBoard</servlet-name>
+        <servlet-class>salesman.SalesManBoard</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SalesManBoard</servlet-name>
+        <url-pattern>/salesmanboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>A_SalesManList</servlet-name>
+        <servlet-class>admin.A_SalesManList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>A_SalesManList</servlet-name>
+        <url-pattern>/a_salesmanlist</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BoardofDiffkinds</servlet-name>
+        <servlet-class>admin.BoardofDiffkinds</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BoardofDiffkinds</servlet-name>
+        <url-pattern>/boardofdiffkinds</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SalesManGrades</servlet-name>
+        <servlet-class>admin.SalesManGrades</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SalesManGrades</servlet-name>
+        <url-pattern>/salesmangrades</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginTime</servlet-name>
+        <servlet-class>BigData.LoginTime</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginTime</servlet-name>
+        <url-pattern>/logintime</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BigDataService</servlet-name>
+        <servlet-class>service.BigDataService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BigDataService</servlet-name>
+        <url-pattern>/bigdataservice</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BigDataDao</servlet-name>
+        <servlet-class>Dao.BigDataDao</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BigDataDao</servlet-name>
+        <url-pattern>/bigdatadao</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OrderBigdata</servlet-name>
+        <servlet-class>BigData.OrderBigdata</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderBigdata</servlet-name>
+        <url-pattern>/orderbigdata</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Test</servlet-name>
+        <servlet-class>BigData.Test</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Test</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserPersona</servlet-name>
+        <servlet-class>BigData.UserPersona</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserPersona</servlet-name>
+        <url-pattern>/userpersona</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogTime</servlet-name>
+        <servlet-class>BigData.LogTime</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogTime</servlet-name>
+        <url-pattern>/logtime</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ClientList</servlet-name>
+        <servlet-class>BigData.ClientList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClientList</servlet-name>
+        <url-pattern>/clientlist</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserCost</servlet-name>
+        <servlet-class>BigData.UserCost</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserCost</servlet-name>
+        <url-pattern>/usercost</url-pattern>
+    </servlet-mapping>
+
+</web-app>
